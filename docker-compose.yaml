@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  tomcat:
+    image: tomcat8:latest
+    container_name: tomcat_srv
+    working_dir: /usr/local/tomcat
+    command: catalina.sh run
+    volumes:
+      - /usr/local/java/jdk8:/usr/local/jdk
+    ports:
+      - 89:8080
